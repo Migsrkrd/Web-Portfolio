@@ -1,0 +1,158 @@
+:root {
+  background-color: black;
+  color: white;
+  font-family: "Anton", sans-serif;
+  font-family: "Bebas Neue", sans-serif;
+  font-family: "Raleway", sans-serif;
+  font-family: "Share Tech", sans-serif;
+}
+
+.navbar {
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+}
+
+.nav-link {
+  margin-right: 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.nav-link:hover {
+  color: rgb(255, 238, 0);
+  transition: 0.2s;
+  letter-spacing: 5px;
+}
+
+.nav-link:active {
+  color: orange;
+}
+
+.nav-link:focus {
+  color: orange;
+}
+
+.headertitle {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+}
+
+.fancy {
+  font-size: 70px;
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image:-webkit-linear-gradient(45deg, rgb(255, 196, 0), white);
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.work {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.work img {
+  margin: 30px;
+  width: 300px;
+  height: 300px;
+  border-radius: 15px;
+  transition: 0.2s;
+  display: block;
+}
+
+.work div:hover img {
+  transition: 0.2s;
+  transform: scale(1.1);
+  border-radius: 200px;
+}
+
+.work a{
+    position: relative;
+    display: inline-block;
+}
+
+.work .worktitle{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.hidden-stuff{
+    position: absolute;
+    bottom: 100px;
+    left: 0px;
+    padding: 30px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    transition: 0.2s;
+    display: none;
+}
+
+.work div:hover .hidden-stuff{
+    display: block;
+    background: rgba(0,0,0,0.8);
+    transition: 0.2s;
+}
+
+.work div:hover .worktitle{
+    background: rgba(0,0,0,0.8);
+    font-size: larger;
+    transition: 0.2s;
+}
+
+.pagetitle{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    font-size: 50px;
+    text-align: center;
+    letter-spacing: 50px;
+    border-bottom: 3px solid white;
+}
+
+.headergraphic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 600px;
+    height: 400px;
+}
+
+.wholeheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
