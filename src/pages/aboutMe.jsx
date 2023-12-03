@@ -16,58 +16,57 @@ export default function AboutMePage() {
       textIndent: "50px",
     },
     img: {
-        width: "50%",
-        height: "50%",
-        margin: "50px",
-        },
+      width: "50%",
+      height: "50%",
+      margin: "50px",
+    },
   };
   return (
     <div className="container" style={styles.container}>
       <h1 className="pagetitle">About Me</h1>
-      <img src="public/IMG_1359 (1).jpg" alt="Photo of Michael Reickerd" style={styles.img}/>
+      <img
+        src="public/IMG_1359 (1).jpg"
+        alt="Photo of Michael Reickerd"
+        style={styles.img}
+      />
       <p style={styles.text}>
-        I am currently developing my new career in software engineering. I am 25
-        years of age and have struggled throughout the majority of my life when
-        it comes to deciding what is right for my career. With other aspects of
-        life, I have been very certain. I come from a family of six, being the
-        youngest boy out of four. I have always had a passion for sports, video
-        games, and socializing with new people.
+        At 25 years old, I've embarked on a path that resonates deeply with my
+        passion and purpose. Life has been a series of discoveries and choices,
+        and my pursuit of a fulfilling career has been no exception. As the youngest of four in a close-knit family of six, I've always been
+        certain about my love for sports, video games, and connecting with new
+        people. However, the road to finding the perfect career has been a
+        winding one.
       </p>
+
       <p style={styles.text}>
-        Ever since I was very young, I have always been talented with math
-        skills. So coming from a family of accountants, this seemed like the
-        best fit for my future career. When I applied to the University of San
-        Jose State, I applied for the department of Accountancy.
+        Born into a family of accountants, it seemed natural for me to follow
+        suit. With a knack for math, I enrolled in the Department of Accountancy
+        at the University of San Jose State. Two years into challenging courses
+        and countless late nights fueled by a newfound caffeine addiction, I
+        realized this wasn't the path for me. Undeterred, I explored different majors and eventually landed on
+        Business Marketing. While it aligned with my love for engaging with
+        others, it didn't take long to realize that there was still something
+        missing. Returning home to my childhood house, I decided to take a
+        break, introspect, and uncover undiscovered passions.
       </p>
+
       <p style={styles.text}>
-        After two years of tough courses, many late nights and a newly developed
-        caffeine addiction, I quickly realized this is not what I want to do
-        with my life. I eventually changed my majors twice, landing on a major
-        that better suits my passion for meeting new people and conversation:
-        Business Marketing.
+        In a serendipitous turn of events, I decided to build my first PC. What
+        started as a fun project turned into a revelation during the coding
+        process to make a Microsoft Windows application bootable from a flash
+        drive. Computer coding had captured my interest in a way I hadn't
+        anticipated. This small venture into the vast world of web development became the
+        turning point in my career journey. Eager to delve deeper, I completed
+        the University of Berkeley Bootcamp, earning a certificate of
+        completion. Now, I am enthusiastically seeking a full-time position
+        where I can contribute my skills and passion for coding to make
+        meaningful contributions in the field of software engineering.
       </p>
+
       <p style={styles.text}>
-        While this was a good fit for my character, it didn't take long to
-        realize that this too was not fit for myself. After moving back home
-        into my childhood house, I decided to take some time off of work and
-        really learn about myself. Maybe there are passions I have that I
-        haven't discovered yet. Maybe there is a hidden talent for something
-        other than mathematics.
-      </p>
-      <p style={styles.text}>
-        On a whim, I decided to construct my very first PC simply for the fun of
-        it. While I knew the process would be new, I invested all of my
-        attention, and let's not forget a large amount of cash, and ended up
-        creating a computer from scratch. While I had a great time during the
-        project, I would have never thought that my favorite part was the coding
-        process to create the Microsoft Windows application bootable from a
-        flash drive. How is this done? Computer coding!
-      </p>
-      <p style={styles.text}>
-        While this is a small step in the large world of web development, it
-        quickly made me finally find my career passion. I received my
-        certificate of completion from the University of Berkeley Bootcamp and
-        have been in desire of a full-time position ever since.
+        Join me on this exciting adventure as I continue to grow, learn, and
+        make a mark in the ever-evolving world of technology. Let's build
+        something amazing together!
       </p>
     </div>
   );
