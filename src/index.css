@@ -32,6 +32,7 @@
   font-weight: bold;
   transition: 0.2s;
   color: rgb(236, 20, 153);
+  letter-spacing: 5px;
 }
 
 .nav-link:focus {
@@ -194,11 +195,13 @@
 
 }
 
-.contactLinkdIn:hover{
+.linkdIn:hover{
   color: rgb(255, 238, 0);
-  transform:perspective(1px) scale(1.1);
-  transition: 0.2s;
 
+}
+
+.linkdIn{
+  color: rgb(236, 20, 153);
 }
 
 
