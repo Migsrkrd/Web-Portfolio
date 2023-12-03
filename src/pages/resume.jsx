@@ -1,8 +1,8 @@
 export default function ResumePage() {
     return (
         <div className="container">
-            <h1>Resume</h1>
-            <p>Resume Page</p>
+            <h1 className="pagetitle">Resume</h1>
+            <p>Coming Soon!</p>
         </div>
     )
     }

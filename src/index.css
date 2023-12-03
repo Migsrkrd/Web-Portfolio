@@ -1,6 +1,6 @@
 :root {
   background-color: black;
-  color: white;
+  color: #F0F0F0;
   font-family: "Anton", sans-serif;
   font-family: "Bebas Neue", sans-serif;
   font-family: "Raleway", sans-serif;
@@ -75,6 +75,7 @@
   border-radius: 15px;
   transition: 0.2s;
   display: block;
+  border: 3px solid #F0F0F0;
 }
 
 .work div:hover img {
@@ -83,7 +84,12 @@
   border-radius: 200px;
 }
 
-.work a{
+.firstWork:hover img{
+  transition: 0.2s;
+  border-radius: 200px;
+}
+
+.work a, .firstWork a {
     position: relative;
     display: inline-block;
 }
@@ -102,6 +108,24 @@
     box-sizing: border-box;
 }
 
+.firstWork .firstworktitle{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    transition: 0.2s;
+    box-sizing: border-box;
+}
+
+.firstworktitle{
+  font-size: 25px;
+}
+
 .hidden-stuff{
     position: absolute;
     bottom: 100px;
@@ -116,13 +140,13 @@
     display: none;
 }
 
-.work div:hover .hidden-stuff{
+.work div:hover .hidden-stuff, .firstWork:hover .hidden-stuff{
     display: block;
     background: rgba(0,0,0,0.8);
     transition: 0.2s;
 }
 
-.work div:hover .worktitle{
+.work div:hover .worktitle, .firstWork:hover .firstworktitle{
     background: rgba(0,0,0,0.8);
     font-size: larger;
     transition: 0.2s;
@@ -153,6 +177,25 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.firstWork img{
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+#githubLink:hover{
+  color: rgb(236, 20, 153);
+  transform:perspective(1px) scale(1.1);
+  transition: 0.2s;
+
+}
+
+.contactLinkdIn:hover{
+  color: rgb(255, 238, 0);
+  transform:perspective(1px) scale(1.1);
+  transition: 0.2s;
+
 }
 
 
