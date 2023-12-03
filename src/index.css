@@ -17,7 +17,6 @@
   margin-right: 10px;
   color: white;
   text-decoration: none;
-  font-weight: bold;
   transition: 0.2s;
 }
 
@@ -27,8 +26,12 @@
   letter-spacing: 5px;
 }
 
-.nav-link:active {
-  color: orange;
+.active {
+  margin-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.2s;
+  color: rgb(236, 20, 153);
 }
 
 .nav-link:focus {
