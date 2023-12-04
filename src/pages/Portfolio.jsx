@@ -18,11 +18,6 @@ export default function Portfolio() {
         textDecoration: "none",
         fontSize: "25px",
     },
-    mainImg: {
-        width: "700px",
-        height: "400px",
-        filter: "saturate(1.4)",
-    },
 }
 
 const [hover, setHover] = useState(false);
@@ -37,6 +32,8 @@ const hideGif = () => {
 
 const imageSrc = hover ? "/1_X33360qSEe-urNS4o9Dd-w.gif" : "/Screenshot 2023-12-02 184816.png";
 
+const mediaQuery760px = '(maxWidth: 760px)';
+
   return (
     <div className="container">
       <h1 className="pagetitle">PORTFOLIO</h1>
@@ -45,7 +42,6 @@ const imageSrc = hover ? "/1_X33360qSEe-urNS4o9Dd-w.gif" : "/Screenshot 2023-12-
           <img
             src={imageSrc}
             alt="tech graphic"
-            style={styles.mainImg}
           />
           <figcaption className="firstworktitle">Gym Flow <a href="https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow" style={styles.githubLink}><i class="fa fa-github" id="githubLink" style={styles.githubIcon}></i></a></figcaption>
           <figcaption className="hidden-stuff">
