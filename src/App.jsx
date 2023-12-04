@@ -1,6 +1,7 @@
 import {Outlet} from 'react-router-dom';
 import Nav from './components/Nav';
 import {useState} from 'react';
+import Footer from './components/footer';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
         <>
             <Nav setCurrentPage={setCurrentPage} currentPage={currentPage}/>
             <Outlet />
+            <Footer />
             
         </>
     );

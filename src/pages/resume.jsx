@@ -102,9 +102,19 @@ export default function ResumePage() {
     },
   };
 
+  const handleDownload = (e) => {
+    e.preventDefault();
+    const link = document.createElement("a");
+    link.href = "/Michael_Reickerd_Resume.png";
+    link.download = "Michael_Reickerd_Resume.png";
+    link.click();
+  };
+
+
   return (
     <div className="container">
       <h1 className="pagetitle">Resume</h1>
+      <a href="/resume.png" className="resumeDownload" onClick={handleDownload}><i class="fa fa-download"></i></a>
       <header>
         <h1 style={styles.myName}>Michael D. Reickerd</h1>
       </header>
