@@ -67,6 +67,18 @@ const imageSrc = hover ? "/1_X33360qSEe-urNS4o9Dd-w.gif" : "/Screenshot 2023-12-
         title={"Blog Site"}
         description={"Just a typical blog site for anything and everything!"}
         githubURL={"https://github.com/Migsrkrd/Blog-Site"}/>
+        <Projects projectURL={"https://migsrkrd.github.io/calender/"}
+        title={"Work Day Scheduler"}
+        description={"A simple work day scheduler to help you stay organized!"}
+        githubURL={"https://github.com/Migsrkrd/calender"}/>
+        <Projects projectURL={"https://migsrkrd.github.io/Weather-Dashboard/"}
+        title={"Weather Dashboard"}
+        description={"A weather dashboard to help you prepare for your day!"}
+        githubURL={"https://github.com/Migsrkrd/Weather-Dashboard"}/>
+        <Projects projectURL={"https://github.com/Migsrkrd/ReadMeGenerator"}
+        title={"ReadMe Generator"}
+        description={"A Node Application to help you create a ReadMe for your projects!"}
+        githubURL={"https://github.com/Migsrkrd/ReadMeGenerator"}/>
       </div>
     </div>
   );

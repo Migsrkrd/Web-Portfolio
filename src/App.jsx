@@ -4,7 +4,7 @@ import {useState} from 'react';
 
 function App() {
 
-    const [currentPage, setCurrentPage] = useState('portfolio');
+    const [currentPage, setCurrentPage] = useState('about');
 
     return (
         <>
