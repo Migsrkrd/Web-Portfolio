@@ -4,6 +4,7 @@
   "description": "",
   "main": "vite.config.js",
   "scripts": {
+    "dev": "vite build && npm run start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "vite",
     "build": "vite build",

@@ -234,6 +234,12 @@
   filter: saturate(1.4);
 }
 
+.photo{
+  width: 50%;
+  height: 50%;
+  margin: 50px;
+}
+
 
 @media screen and (max-width: 900px){
   .headertitle{
@@ -275,5 +281,54 @@
     width: 200px;
     height: 200px;
   }
+}
+
+@media screen and (max-width: 400px){
+  .pagetitle{
+    font-size: 20px;
+    letter-spacing: 20px;
+    padding-left: 25px;
+    margin-top: 0px;
+  }
+
+  .headertitle{
+    text-align: center;
+  }
+
+  .navbar{
+    padding: 0px;
+  }
+
+  .firstWork .firstworktitle{
+    font-size: 20px;
+    top: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  .firstWork .hidden-stuff{
+    bottom: 30px;
+    padding: 5px 35px 5px 35px;
+  }
+  .hidden-stuff{
+    bottom: 50px;
+    padding: 5px 50px 5px 50px;
+  }
+
+  .work .worktitle{
+    top: 40px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .photo{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+  }
+  
 }
 

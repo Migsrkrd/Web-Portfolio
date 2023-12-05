@@ -76,12 +76,26 @@ export default function ContactPage() {
         fontWeight: "bold",
     },
     contactList: {
-        listStyle: "none",
         color: "white",
         fontSize: "20px",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        textAlign: "center",
+        listStyle: "none",
+        textIndent: "none",
+    },
+    mymessage: {
+        color: "white",
+        fontSize: "20px",
+        fontWeight: "bold",
+        marginTop: "20px",
+        textAlign: "center",
+    },
+    button: {
+      width: "100px",
+      height: "40px",
+      background: "rgb(255, 238, 0)",
+      border: "none",
+      borderRadius: "15px",
+      cursor: "pointer",
     },
   };
 
@@ -180,7 +194,7 @@ export default function ContactPage() {
       {messageError && <span style={{ color: 'red' }}>Message is required</span>}
     </div>
     <div>
-      <h2>Want to get a hold of me? Reach out at any of the provided contacts listed below!</h2>
+      <h2 style={styles.mymessage}>Want to get a hold of me? Reach out at any of the provided contacts listed below!</h2>
       <ul style={styles.contactList}>
         <li>
           <a className="linkdIn" href="https://www.linkedin.com/in/kevin-choi-0a9a3b1b0/">LinkedIn</a>
@@ -193,7 +207,7 @@ export default function ContactPage() {
         </li>
       </ul>
     </div>
-    <button onClick={handleSubmit}>Submit</button>
+    <button style={styles.button} onClick={handleSubmit}>Submit</button>
   </div>
   );
 }

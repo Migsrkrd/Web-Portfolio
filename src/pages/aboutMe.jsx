@@ -15,11 +15,6 @@ export default function AboutMePage() {
       color: "#F0F0F0",
       textIndent: "50px",
     },
-    img: {
-      width: "50%",
-      height: "50%",
-      margin: "50px",
-    },
   };
   return (
     <div className="container" style={styles.container}>
@@ -27,7 +22,7 @@ export default function AboutMePage() {
       <img
         src="public/IMG_1359 (1).jpg"
         alt="Photo of Michael Reickerd"
-        style={styles.img}
+        className="photo"
       />
       <p style={styles.text}>
         At 25 years old, I've embarked on a path that resonates deeply with my
