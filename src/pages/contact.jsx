@@ -79,14 +79,15 @@ export default function ContactPage() {
         color: "white",
         fontSize: "20px",
         textAlign: "center",
-        listStyle: "none",
-        textIndent: "none",
+        marginBottom: "50px",
+        marginTop: "50px",
     },
     mymessage: {
         color: "white",
         fontSize: "20px",
         fontWeight: "bold",
-        marginTop: "20px",
+        marginTop: "50px",
+        marginBottom: "20px",
         textAlign: "center",
     },
     button: {
