@@ -20,7 +20,7 @@ export default function AboutMePage() {
     <div className="container" style={styles.container}>
       <h1 className="pagetitle">About Me</h1>
       <img
-        src="public/IMG_1359 (1).jpg"
+        src="/IMG_1359 (1).jpg"
         alt="Photo of Michael Reickerd"
         className="photo"
       />
