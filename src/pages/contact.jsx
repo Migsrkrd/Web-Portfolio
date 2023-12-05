@@ -198,7 +198,7 @@ export default function ContactPage() {
       <h2 style={styles.mymessage}>Want to get a hold of me? Reach out at any of the provided contacts listed below!</h2>
       <ul style={styles.contactList}>
         <li>
-          <a className="linkdIn" href="https://www.linkedin.com/in/kevin-choi-0a9a3b1b0/">LinkedIn</a>
+          <a className="linkdIn" href="https://www.linkedin.com/in/mikey-reickerd-1716a71a3/">LinkedIn</a>
         </li>
         <li>
           <p>Personal Line: (555)-555-5555</p>

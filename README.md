@@ -2,6 +2,10 @@
 
 Welcome to my web developer portfolio! This project showcases my skills, projects, and information about me. The portfolio is built using React.
 
+Deployed link: [Michael-Reickerd-Web-Portfolio](https://main--michael-reickerd-web-dev-portfolio.netlify.app/)
+
+![Site Image](<public/Screenshot 2023-12-04 180135.png>)
+
 ## Table of Contents
 
 - [Introduction](#introduction)
@@ -48,7 +52,7 @@ To run this portfolio locally, follow these steps:
 After installing dependencies, run the application using:
 
 ```bash
-npm start
+npm run dev
 ```
 
 ## Questions
