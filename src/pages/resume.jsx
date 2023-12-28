@@ -54,51 +54,71 @@ export default function ResumePage() {
       textAlign: "center",
     },
     workDiv: {
-        display: "flex",
-        },
-    work1 : {
-        width: "50%",
-        paddingLeft: "20px",
+      display: "flex",
     },
-    work2 : {
-        width: "50%",
-        paddingLeft: "20px",
-        borderLeft: "1px solid white",
+    work1: {
+      width: "50%",
+      paddingLeft: "20px",
+      paddingRight: "20px",
+    },
+    work2: {
+      width: "50%",
+      paddingLeft: "30px",
+      borderLeft: "1px solid white",
     },
     educationSection: {
-        margin: "10px",
-        width: "90%",
-      },
+      margin: "10px",
+      width: "90%",
+    },
     edAndComp: {
-        borderTop: "1px solid white",
-        display: "flex",
-        justifyContent: "space-around",
-        flexWrap: "wrap",
-        width: "100%",
+      borderTop: "1px solid white",
+      display: "flex",
+      justifyContent: "center",
+      width: "90%",
     },
     edSection: {
-        width: "50%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+      width: "100%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+    },
+    edItem: {
+      width: "100%",
+      padding: "0px",
+      width: "100%",
+      margin: "50px",
     },
     compSection: {
-        width: "50%",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+      width: "50%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
     },
     edTitle: {
-        color: "rgb(255, 196, 0)",
-        borderBottom: "1px solid white",
-        padding: "10px",
-        textAlign: "center",
+      color: "rgb(255, 196, 0)",
+      borderBottom: "1px solid white",
+      padding: "10px",
+      textAlign: "center",
     },
     compTitle: {
-        color: "rgb(255, 196, 0)",
-        borderBottom: "1px solid white",
-        padding: "10px",
-        textAlign: "center",
+      color: "rgb(255, 196, 0)",
+      borderBottom: "1px solid white",
+      padding: "10px",
+      textAlign: "center",
+    },
+    objectiveSection: {
+      margin: "10px",
+      width: "90%",
+    },
+    edus: {
+      display: "flex",
+      width: "100%",
+    },
+    bottom: {
+      display: "flex",
+      justifyContent: "space-around",
+      width: "90%",
+      borderTop: "1px solid white",
     },
   };
 
@@ -110,11 +130,12 @@ export default function ResumePage() {
     link.click();
   };
 
-
   return (
     <div className="container">
       <h1 className="pagetitle">Resume</h1>
-      <a href="/resume.png" className="resumeDownload" onClick={handleDownload}><i class="fa fa-download"></i></a>
+      <a href="/resume.png" className="resumeDownload" onClick={handleDownload}>
+        <i class="fa fa-download"></i>
+      </a>
       <header>
         <h1 style={styles.myName}>Michael D. Reickerd</h1>
       </header>
@@ -139,26 +160,55 @@ export default function ResumePage() {
         </address>
       </section>
 
-      <section>
+      <section style={styles.objectiveSection}>
         <h2 style={styles.objective}>Objective</h2>
         <p>
-          To obtain a position that will enable me to use my strong
-          organizational, leadership, educational background, and ability to
-          work well with people.
+          As a Full Stack Web Developer with a foundation in marketing, I am
+          dedicated to crafting innovative and user-centric applications. My
+          experience in marketing brings a unique perspective to web
+          development, allowing me to seamlessly blend creative strategies with
+          technical expertise. Passionate about creating dynamic solutions, I
+          strive to enhance user experiences and contribute to the ever-evolving
+          landscape of the digital world.
         </p>
       </section>
+      <div style={styles.edAndComp}>
+        <section style={styles.edSection}>
+          <h2 style={styles.edTitle}>Education</h2>
+          <section style={styles.edus}>
+            <div style={styles.edItem}>
+              <h3>Certificate of Completion in Full Stack Web Development</h3>
+              <p>University of California-Berkeley Bootcamp Spot - Remote</p>
+              <p>September 2023 to December 2023</p>
+              <p>Graduated in the top 1%</p>
+            </div>
+            <div style={styles.edItem}>
+              <h3>Bachelor's degree in Business Marketing</h3>
+              <p>San Jose State University - San Jose, CA</p>
+              <p>August 2016 to December 2020</p>
+              <p>Educational scholarship</p>
+            </div>
+          </section>
+        </section>
+      </div>
 
       <section style={styles.skillsSection}>
         <h2 style={styles.skills}>Core Strengths and Skills</h2>
         <ul style={styles.skillsList}>
-          <li>Mathematics</li>
-          <li>Leadership abilities</li>
-          <li>Finance/Accounting</li>
-          <li>Dedicated</li>
-          <li>Reliable</li>
-          <li>Exceeds expectations</li>
-          <li>Organization</li>
-          <li>Multi-Tasking</li>
+          <li>HTML5</li>
+          <li>Javascript</li>
+          <li>CSS</li>
+          <li>MySQL</li>
+          <li>MERN</li>
+          <li>RESTful Apps</li>
+          <li>NoSQL</li>
+          <li>MongoDB</li>
+          <li>OOP</li>
+          <li>Git</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>ORM</li>
+          <li>React</li>
         </ul>
       </section>
 
@@ -166,74 +216,72 @@ export default function ResumePage() {
         <h2 style={styles.experienceTitle}>Professional Experience</h2>
         <div style={styles.workDiv}>
           <div style={styles.work1}>
-            <h3>Customer Suite Server</h3>
-            <p>
-              Sept. 2018 - March 2019
-              <br />
-              Avaya Stadium, San Jose, CA.
-            </p>
+            <h3>The Old Spaghetti Factory</h3>
+            <p>National Restaurant Chain</p>
+            <p>Marketing Assistant | Bartender | Server</p>
+            <p>San Jose, CA August 2018 to March 2022</p>
+
             <ul>
-              <li>Provided Stadium preparations prior to events.</li>
               <li>
-                Monitored and maintained facility during operating hours,
-                ensuring a positive, clean environment for guests.
+                Executed successful campaigns, managing social media for a 22%
+                customer engagement boost.
               </li>
               <li>
-                Served and provided positive customer service to customers.
+                Elevated guest experiences through unparalleled customer
+                service.
+              </li>
+              <li>
+                Demonstrated expertise in mixology, streamlined inventory
+                management, and played a pivotal role in fostering repeat
+                business through exceptional customer relationships.
+              </li>
+              <li>
+                Honed multitasking, adaptability, and collaboration in a dynamic
+                environment.
               </li>
             </ul>
           </div>
           <div style={styles.work2}>
-            <h3>Host and Marketing Assistant</h3>
-            <p>
-              August 2019 – Present
-              <br />
-              The Old Spaghetti Factory, San Jose, CA.
-            </p>
+            <h3>Berliner Cohen LLP</h3>
+            <p>Law Firm Specializing in Business Law</p>
+            <p>Administrative Assistant</p>
+            <p>San Jose, CA March 2018 to August 2018</p>
+
             <ul>
-              <li>
-                Supported the daily functions and operations for nationally
-                sponsored tournaments, corporate fundraisers, and privately
-                produced club events.
-              </li>
-              <li>
-                Sales associate for the San Jose branch and Northern Californian
-                District.
-              </li>
-              <li>Planned and managed daily schedules.</li>
-              <li>Provided personal staff support.</li>
-              <li>Provided Marketing outreach and research for Corporate.</li>
+              <li>Pivotal role in transitioning from paper to digital.</li>
+              <li>Meticulously transmitted documents, ensuring accuracy.</li>
+              <li>Prepared files with a strong organizational focus.</li>
+              <li>Enhanced proficiency in document management.</li>
+              <li>Contributed to overall operational efficiency.</li>
             </ul>
           </div>
         </div>
       </section>
-    <div style={styles.edAndComp}>
-      <section style={styles.edSection}>
-        <h2 style={styles.edTitle}>Education</h2>
-        <p>
-          San Jose State University, San Jose, CA
-          <br />
-          August 2016 - Present
-          <br />
-          Major: Accounting
-          <br />
-          GPA: 3.325
-        </p>
-        <p>Misc.: Brother of the Sigma Chi Fraternity</p>
-      </section>
+      <div style={styles.bottom}>
+        <section style={styles.edSection}>
+          <h2 style={styles.compTitle}>Miscellaneous</h2>
 
-      <section style={styles.compSection}>
-        <h2 style={styles.compTitle}>Computer Skills</h2>
-        <p>MS Word, MS Excel, MS PowerPoint, MS Project</p>
-      </section>
+          <ul>
+            <li>Brother of the Sigma Chi Fraternity</li>
+            <li>Managed Events and Fundraisers</li>
+            <li>Helped raise over $20,000 for the Huntsman Cancer Institute</li>
+          </ul>
+        </section>
+
+        <section style={styles.edSection}>
+          <h2 style={styles.compTitle}>Interests</h2>
+
+          <ul>
+            <li>Enjoys MERN programming, building projects in personal time</li>
+            <li>Enjoys building computers</li>
+            <li>
+              Ambitious about learning new and modern web development
+              technologies
+            </li>
+            <li>Enjoys Snowboarding, Football, Fitness, and Socializing</li>
+          </ul>
+        </section>
       </div>
-
-      <section style={styles.edSection}>
-        <h2 style={styles.compTitle}>Miscellaneous</h2>
-        <p>Brother of the Sigma Chi Fraternity</p>
-        <p>Managed Events and Fundraisers</p>
-        <p>Helped raise over $20,000 for the Huntsman Cancer Institute</p>
-      </section>
     </div>
   );
 }
