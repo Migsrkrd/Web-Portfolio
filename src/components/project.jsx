@@ -45,7 +45,7 @@ export default function Projects({projectURL, title, description, githubURL}){
               alt="tech graphic"
               style={styles.techGraphic}
             />
-            <figcaption className="worktitle" style={styles.FigTitle}>{title} <a href={githubURL} style={styles.githubLink}><i class="fa fa-github" id="githubLink" style={styles.githubIcon}></i></a></figcaption>
+            <figcaption className="worktitle" style={styles.FigTitle}>{title} <a href={githubURL} style={styles.githubLink}><i className="fa fa-github" id="githubLink" style={styles.githubIcon}></i></a></figcaption>
             <figcaption className="hidden-stuff">
               {description}
             </figcaption>

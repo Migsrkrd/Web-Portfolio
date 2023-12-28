@@ -38,35 +38,34 @@ const mediaQuery760px = '(maxWidth: 760px)';
     <div className="container">
       <h1 className="pagetitle">PORTFOLIO</h1>
       <div className="firstWork" onMouseEnter={showGif} onMouseLeave={hideGif}>
-        <a href="https://sheltered-inlet-69891-1c93b8a30eb8.herokuapp.com/">
+          <a href="https://read-zen.onrender.com/">
           <img
             src={imageSrc}
             alt="tech graphic"
           />
-          <figcaption className="firstworktitle">Gym Flow <a href="https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow" style={styles.githubLink}><i class="fa fa-github" id="githubLink" style={styles.githubIcon}></i></a></figcaption>
+          <figcaption className="firstworktitle">ReadZen<a href="https://github.com/Migsrkrd/ReadZen" style={styles.githubLink}><i className="fa fa-github" id="githubLink" style={styles.githubIcon}></i></a></figcaption>
           <figcaption className="hidden-stuff">
-            A Web Application for tracking, sharing, and creating fitness
-            routines!
+            A MERN web application used for creating ReadMes and sharing projects!
           </figcaption>
         </a>
       </div>
       <div className="work">
+        <Projects projectURL={"https://sheltered-inlet-69891-1c93b8a30eb8.herokuapp.com/"}
+        title={"Gym Flow"}
+        description={"A RESTful application for users to create and share workouts!"}
+        githubURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}/>
+        <Projects projectURL={"https://grocease-graphql.onrender.com/"}
+        title={"Grocease"}
+        description={"A MERN web application used for creating, sending, and receiving grocery lists!"}
+        githubURL={"https://github.com/Migsrkrd/Grocery-List"}/>
+        <Projects projectURL={"https://migsrkrd.github.io/EZ-Stream/"}
+        title={"EZStream"}
+        description={"A web application using third party APIs to help you find your next favorite movie or show!"}
+        githubURL={"https://github.com/Migsrkrd/EZ-Stream"}/>
         <Projects projectURL={"https://salty-sierra-80916-ba0b5056f1f8.herokuapp.com/"}
-        title={"Jate"}
-        description={"A Progressive Web Application for a Text Editor!"}
+        title={"JATE"}
+        description={"A Progressive Web Application for just another text editor!"}
         githubURL={"https://github.com/Migsrkrd/Text-Editor"}/>
-        <Projects projectURL={"https://github.com/Migsrkrd/logo-generator"}
-        title={"SVG Generator"}
-        description={"A Node Application to create an SVG Logo for your website!"}
-        githubURL={"https://github.com/Migsrkrd/logo-generator"}/>
-        <Projects projectURL={"https://powerful-river-93241-46494d1ecbf5.herokuapp.com/"}
-        title={"Blog Site"}
-        description={"Just a typical blog site for anything and everything!"}
-        githubURL={"https://github.com/Migsrkrd/Blog-Site"}/>
-        <Projects projectURL={"https://migsrkrd.github.io/calender/"}
-        title={"Work Day Scheduler"}
-        description={"A simple work day scheduler to help you stay organized!"}
-        githubURL={"https://github.com/Migsrkrd/calender"}/>
         <Projects projectURL={"https://migsrkrd.github.io/Weather-Dashboard/"}
         title={"Weather Dashboard"}
         description={"A weather dashboard to help you prepare for your day!"}

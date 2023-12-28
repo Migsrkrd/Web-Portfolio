@@ -201,9 +201,6 @@ export default function ContactPage() {
           <a className="linkdIn" href="https://www.linkedin.com/in/mikey-reickerd-1716a71a3/">LinkedIn</a>
         </li>
         <li>
-          <p>Personal Line: (555)-555-5555</p>
-        </li>
-        <li>
           <p>Email: mreickcastillero@gmail.com</p>
         </li>
       </ul>

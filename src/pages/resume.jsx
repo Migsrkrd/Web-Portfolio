@@ -134,7 +134,7 @@ export default function ResumePage() {
     <div className="container">
       <h1 className="pagetitle">Resume</h1>
       <a href="/resume.png" className="resumeDownload" onClick={handleDownload}>
-        <i class="fa fa-download"></i>
+        <i className="fa fa-download"></i>
       </a>
       <header>
         <h1 style={styles.myName}>Michael D. Reickerd</h1>
