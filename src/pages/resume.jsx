@@ -43,28 +43,33 @@ export default function ResumePage() {
       flexWrap: "wrap",
     },
     experienceSection: {
-      margin: "10px",
-      width: "90%",
+      width: "88.5%",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      marginTop: "-20px",
+      marginBottom: "10px",
     },
     experienceTitle: {
       color: "rgb(255, 196, 0)",
       borderBottom: "1px solid white",
       borderTop: "1px solid white",
       padding: "10px",
-      textAlign: "center",
+      textAlign: "Center",
+      width: "100%",
     },
     workDiv: {
       display: "flex",
+      flexDirection: "column",
     },
     work1: {
-      width: "50%",
+      width: "100%",
       paddingLeft: "20px",
       paddingRight: "20px",
     },
     work2: {
-      width: "50%",
+      width: "100%",
       paddingLeft: "30px",
-      borderLeft: "1px solid white",
     },
     educationSection: {
       margin: "10px",
@@ -83,10 +88,10 @@ export default function ResumePage() {
       alignItems: "center",
     },
     edItem: {
-      width: "100%",
       padding: "0px",
-      width: "100%",
       margin: "50px",
+      marginTop: "-10px",
+      marginBottom: "10px",
     },
     compSection: {
       width: "50%",
@@ -96,9 +101,9 @@ export default function ResumePage() {
     },
     edTitle: {
       color: "rgb(255, 196, 0)",
-      borderBottom: "1px solid white",
       padding: "10px",
-      textAlign: "center",
+      textAlign: "left",
+      width: "100%",
     },
     compTitle: {
       color: "rgb(255, 196, 0)",
@@ -112,6 +117,8 @@ export default function ResumePage() {
     },
     edus: {
       display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
       width: "100%",
     },
     bottom: {
@@ -120,13 +127,19 @@ export default function ResumePage() {
       width: "90%",
       borderTop: "1px solid white",
     },
+    dates: {
+      display: "flex",
+      justifyContent: "space-between",
+      marginTop: "-20px",
+      marginBottom: "-20px",
+    },
   };
 
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
-    link.href = "/Michael_Reickerd_Resume.png";
-    link.download = "Michael_Reickerd_Resume.png";
+    link.href = "/Michael Reickerd Resume.pdf";
+    link.download = "Michael_Reickerd_Resume.pdf";
     link.click();
   };
 
@@ -163,13 +176,9 @@ export default function ResumePage() {
       <section style={styles.objectiveSection}>
         <h2 style={styles.objective}>Objective</h2>
         <p>
-          As a Full Stack Web Developer with a foundation in marketing, I am
-          dedicated to crafting innovative and user-centric applications. My
-          experience in marketing brings a unique perspective to web
-          development, allowing me to seamlessly blend creative strategies with
-          technical expertise. Passionate about creating dynamic solutions, I
-          strive to enhance user experiences and contribute to the ever-evolving
-          landscape of the digital world.
+          As a Full Stack Web Developer with a marketing background, I combine
+          creative strategies with technical expertise to craft user-centric
+          applications, aiming to enhance digital user experiences.
         </p>
       </section>
       <div style={styles.edAndComp}>
@@ -180,13 +189,13 @@ export default function ResumePage() {
               <h3>Certificate of Completion in Full Stack Web Development</h3>
               <p>University of California-Berkeley Bootcamp Spot - Remote</p>
               <p>September 2023 to December 2023</p>
-              <p>Graduated in the top 1%</p>
+              <li>Graduated in the top 1%</li>
             </div>
             <div style={styles.edItem}>
               <h3>Bachelor's degree in Business Marketing</h3>
               <p>San Jose State University - San Jose, CA</p>
               <p>August 2016 to December 2020</p>
-              <p>Educational scholarship</p>
+              <li>Educational scholarship</li>
             </div>
           </section>
         </section>
@@ -213,46 +222,106 @@ export default function ResumePage() {
       </section>
 
       <section style={styles.experienceSection}>
-        <h2 style={styles.experienceTitle}>Professional Experience</h2>
+        <h2 style={styles.experienceTitle}>Experience</h2>
         <div style={styles.workDiv}>
           <div style={styles.work1}>
-            <h3>The Old Spaghetti Factory</h3>
-            <p>National Restaurant Chain</p>
-            <p>Marketing Assistant | Bartender | Server</p>
-            <p>San Jose, CA August 2018 to March 2022</p>
-
+            <h3>ReadZen</h3>
+            <div style={styles.dates}>
+              <p>Full Stack Web Developer</p>
+              <p>December 2023</p>
+            </div>
             <ul>
               <li>
-                Executed successful campaigns, managing social media for a 22%
-                customer engagement boost.
+                fullstack app for user friendly creating and sharing of
+                ReadMes/Projects
               </li>
               <li>
-                Elevated guest experiences through unparalleled customer
-                service.
+                React, Express.js, Node.js, Apollo Server, Graphql, javascript,
+                CSS, HTML, and MongoDB/Mongoose (MERN stack)
               </li>
               <li>
-                Demonstrated expertise in mixology, streamlined inventory
-                management, and played a pivotal role in fostering repeat
-                business through exceptional customer relationships.
-              </li>
-              <li>
-                Honed multitasking, adaptability, and collaboration in a dynamic
-                environment.
+                Github:{" "}
+                <a href="https://github.com/Migsrkrd/ReadZen">click here</a> ,
+                Deployment:{" "}
+                <a href="https://read-zen.onrender.com/">click here</a>
               </li>
             </ul>
           </div>
-          <div style={styles.work2}>
+          <div style={styles.work1}>
+            <h3>Gym Flow</h3>
+            <div style={styles.dates}>
+              <p>Full Stack Web Developer</p>
+              <p>November 2023</p>
+            </div>
+            <ul>
+              <li>
+                RESTful application for tracking, creating, and sharing workout
+                routines
+              </li>
+              <li>
+                HTML, CSS, Javascript, Session, Node.js, Express, Cookies,
+                MySQL, Handlebars
+              </li>
+              <li>
+                Github:{" "}
+                <a href="https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow">
+                  click here
+                </a>{" "}
+                , Deployment:{" "}
+                <a href="https://sheltered-inlet-69891-1c93b8a30eb8.herokuapp.com/">
+                  click here
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div style={styles.work1}>
+            <h3>Grocease</h3>
+            <div style={styles.dates}>
+              <p>Full Stack Web Developer</p>
+              <p>January 2024</p>
+            </div>
+            <ul>
+              <li>
+                Mern Application for creating, and sending grocery lists online{" "}
+              </li>
+              <li>
+              React, Express.js, Node.js, Apollo Server, Graphql, javascript, CSS, HTML, and MongoDB/Mongoose
+              </li>
+              <li>
+                Github:{" "}
+                <a href="https://github.com/Migsrkrd/Grocery-List">
+                  click here
+                </a>{" "}
+                , Deployment:{" "}
+                <a href="https://grocease-graphql.onrender.com">
+                  click here
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div style={styles.work1}>
+            <h3>The Old Spaghetti Factory</h3>
+            <p>National Restaurant Chain</p>
+            <div style={styles.dates}>
+              <p>Marketing Assistant | Bartender | Server</p>
+              <p>San Jose, CA August 2018 to March 2022</p>
+            </div>
+            <ul>
+              <li>
+                Managed social media marketing programs/campaigns for a 22%
+                increase in customer visits.
+              </li>
+            </ul>
+          </div>
+          <div style={styles.work1}>
             <h3>Berliner Cohen LLP</h3>
             <p>Law Firm Specializing in Business Law</p>
-            <p>Administrative Assistant</p>
-            <p>San Jose, CA March 2018 to August 2018</p>
-
+            <div style={styles.dates}>
+              <p>Administrative Assistant</p>
+              <p>San Jose, CA March 2018 to August 2018</p>
+            </div>
             <ul>
               <li>Pivotal role in transitioning from paper to digital.</li>
-              <li>Meticulously transmitted documents, ensuring accuracy.</li>
-              <li>Prepared files with a strong organizational focus.</li>
-              <li>Enhanced proficiency in document management.</li>
-              <li>Contributed to overall operational efficiency.</li>
             </ul>
           </div>
         </div>
