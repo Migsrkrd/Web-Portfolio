@@ -1,68 +1,29 @@
-import { useState } from 'react';
+import { useState } from "react";
+import emailjs from "emailjs-com";
 
 export default function ContactPage() {
   const styles = {
-    nameSection: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
-      width: "30%",
-      marginTop: "20px",
-    },
-    name: {
-      fontSize: "20px",
-      fontWeight: "bold",
-      color: "white",
-      marginRight: "20px",
-    },
     nameInput: {
-      width: "100%",
-      height: "30px",
-      borderRadius: "5px",
-      border: "none",
-      outline: "none",
-      paddingLeft: "10px",
-        backgroundColor: "#F0F0F0",
-        fontSize: "20px",
-    },
-    emailSection: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
       width: "40%",
-      marginTop: "20px",
-    },
-    email: {
-      fontSize: "20px",
-      fontWeight: "bold",
-      color: "white",
-      marginRight: "20px",
-    },
-    emailInput: {
-      width: "100%",
       height: "30px",
       borderRadius: "5px",
       border: "none",
       outline: "none",
       paddingLeft: "10px",
       backgroundColor: "#F0F0F0",
-        fontSize: "20px",
-    },
-    messageSection: {
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-between",
-      alignItems: "center",
-      width: "60%",
-      marginTop: "20px",
-    },
-    message: {
       fontSize: "20px",
-      fontWeight: "bold",
-      color: "white",
-      marginRight: "20px",
+      marginBottom: "20px",
+    },
+    emailInput: {
+      width: "70%",
+      height: "30px",
+      borderRadius: "5px",
+      border: "none",
+      outline: "none",
+      paddingLeft: "10px",
+      backgroundColor: "#F0F0F0",
+      fontSize: "20px",
+      marginBottom: "20px",
     },
     messageinput: {
       width: "100%",
@@ -72,23 +33,15 @@ export default function ContactPage() {
       outline: "none",
       paddingLeft: "10px",
       backgroundColor: "#F0F0F0",
-        fontSize: "15px",
-        fontWeight: "bold",
+      fontSize: "20px",
+      fontWeight: "bold",
     },
     contactList: {
-        color: "white",
-        fontSize: "20px",
-        textAlign: "center",
-        marginBottom: "50px",
-        marginTop: "50px",
-    },
-    mymessage: {
-        color: "white",
-        fontSize: "20px",
-        fontWeight: "bold",
-        marginTop: "50px",
-        marginBottom: "20px",
-        textAlign: "center",
+      color: "white",
+      fontSize: "20px",
+      textAlign: "center",
+      marginBottom: "50px",
+      marginTop: "50px",
     },
     button: {
       width: "100px",
@@ -97,115 +50,84 @@ export default function ContactPage() {
       border: "none",
       borderRadius: "15px",
       cursor: "pointer",
+      marginTop: "20px",
+      fontSize: "20px",
+      fontWeight: "bold",
     },
   };
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-  const [nameError, setNameError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [messageError, setMessageError] = useState(false);
+  const [formData, setFormData] = useState({
+    from_name: "",
+    from_email: "",
+    message: "",
+  });
 
-  const validateForm = () => {
-    // Validate each form field
-    const isNameValid = name.trim() !== '';
-    const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    const isMessageValid = message.trim() !== '';
-
-    // Set error states
-    setNameError(!isNameValid);
-    setEmailError(!isEmailValid);
-    setMessageError(!isMessageValid);
-
-    // Return true if all fields are valid, otherwise false
-    return isNameValid && isEmailValid && isMessageValid;
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  const handleBlur = (field) => {
-    // Handle blur event to trigger validation
-    if (field === 'name') {
-      setNameError(name.trim() === '');
-    } else if (field === 'email') {
-      setEmailError(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email));
-    } else if (field === 'message') {
-      setMessageError(message.trim() === '');
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    
+    const form = e.target.closest('form'); // Get the closest form element
+
+    if(!formData.from_name || !formData.from_email || !formData.message) {
+        alert('Please fill in all the fields');
+        return;
     }
+    
+    emailjs.sendForm('service_0gkv9kq', 'template_8krs7y9', form, 'Z-wQdA1YRbCgUcKn5')
+        .then((result) => {
+            console.log('Email sent successfully:', result.text);
+            alert('Email sent successfully');
+            setFormData({
+                from_name: '',
+                from_email: '',
+                message: ''
+            });
+        }, (error) => {
+            console.error('Error sending email:', error.text);
+            alert('Failed to send email, please make sure you have filled in all the fields correctly.');
+        });
   };
-
-  const handleSubmit = () => {
-    // Validate the form before submission
-    const isFormValid = validateForm();
-
-    // If the form is valid, you can proceed with submission logic
-    if (isFormValid) {
-      // Add your submission logic here
-      alert('Form is not set up to submit yet. Please check back later.');
-    } else {
-      // Display an error notification or handle accordingly
-      alert('Form submission failed. Please check the fields.');
-    }
-  };
-
 
   return (
     <div className="container">
-    <h1 className="pagetitle">Contact</h1>
-    <div style={styles.nameSection}>
-      <label htmlFor="name" style={styles.name}>
-        Name:
-      </label>
-      <input
-        type="text"
+      <h1 className="pagetitle">Contact</h1>
+      <form style={styles.contactList} onSubmit={handleSubmit}>
+        <input
         style={styles.nameInput}
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        onBlur={() => handleBlur('name')}
-      />
-      {nameError && <span style={{ color: 'red' }}>Name is required</span>}
-    </div>
-    <div style={styles.emailSection}>
-      <label htmlFor="email" style={styles.email}>
-        Email:
-      </label>
-      <input
-        type="text"
+          type="text"
+          name="from_name"
+          placeholder="Your Name"
+          value={formData.from_name}
+          onChange={handleChange}
+          required
+        />
+        <input
         style={styles.emailInput}
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        onBlur={() => handleBlur('email')}
-      />
-      {emailError && <span style={{ color: 'red' }}>Valid email is required</span>}
-    </div>
-    <div style={styles.messageSection}>
-      <label htmlFor="message" style={styles.message}>
-        Message:
-      </label>
-      <textarea
-        name="message"
-        id="message"
-        cols="30"
-        rows="10"
-        placeholder="Enter your message here..."
+          type="email"
+          name="from_email"
+          placeholder="Your Email"
+          value={formData.from_email}
+          onChange={handleChange}
+          required
+        />
+        <textarea
         style={styles.messageinput}
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        onBlur={() => handleBlur('message')}
-      ></textarea>
-      {messageError && <span style={{ color: 'red' }}>Message is required</span>}
+          name="message"
+          placeholder="Your Message"
+          value={formData.message}
+          onChange={handleChange}
+          required
+        ></textarea>
+        <button type="submit" style={styles.button} onClick={handleSubmit}>
+          Submit
+        </button>
+      </form>
     </div>
-    <div>
-      <h2 style={styles.mymessage}>Want to get a hold of me? Reach out at any of the provided contacts listed below!</h2>
-      <ul style={styles.contactList}>
-        <li>
-          <a className="linkdIn" href="https://www.linkedin.com/in/mikey-reickerd-1716a71a3/">LinkedIn</a>
-        </li>
-        <li>
-          <p>Email: mreickcastillero@gmail.com</p>
-        </li>
-      </ul>
-    </div>
-    <button style={styles.button} onClick={handleSubmit}>Submit</button>
-  </div>
   );
 }
