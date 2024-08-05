@@ -39,8 +39,14 @@ export default function ResumePage() {
     },
     skillsList: {
       display: "flex",
-      justifyContent: "space-around",
+      flexDirection: "row",
       flexWrap: "wrap",
+      justifyContent: "center",
+      listStyleType: "none",
+      padding: "0px",
+    },
+    skill: {
+      margin: "10px",
     },
     experienceSection: {
       width: "88.5%",
@@ -80,6 +86,7 @@ export default function ResumePage() {
       display: "flex",
       justifyContent: "center",
       width: "90%",
+      marginBottom: "30px",
     },
     edSection: {
       width: "100%",
@@ -138,8 +145,8 @@ export default function ResumePage() {
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
-    link.href = "/Michael Reickerd Resume.pdf";
-    link.download = "Michael_Reickerd_Resume.pdf";
+    link.href = "/resume.pdf";
+    link.download = "/resume.pdf";
     link.click();
   };
 
@@ -181,43 +188,33 @@ export default function ResumePage() {
           applications, aiming to enhance digital user experiences.
         </p>
       </section>
-      <div style={styles.edAndComp}>
-        <section style={styles.edSection}>
-          <h2 style={styles.edTitle}>Education</h2>
-          <section style={styles.edus}>
-            <div style={styles.edItem}>
-              <h3>Certificate of Completion in Full Stack Web Development</h3>
-              <p>University of California-Berkeley Bootcamp Spot - Remote</p>
-              <p>September 2023 to December 2023</p>
-              <li>Graduated in the top 1%</li>
-            </div>
-            <div style={styles.edItem}>
-              <h3>Bachelor's degree in Business Marketing</h3>
-              <p>San Jose State University - San Jose, CA</p>
-              <p>August 2016 to December 2020</p>
-              <li>Educational scholarship</li>
-            </div>
-          </section>
-        </section>
-      </div>
 
       <section style={styles.skillsSection}>
         <h2 style={styles.skills}>Core Strengths and Skills</h2>
         <ul style={styles.skillsList}>
-          <li>HTML5</li>
-          <li>Javascript</li>
-          <li>CSS</li>
-          <li>MySQL</li>
-          <li>MERN</li>
-          <li>RESTful Apps</li>
-          <li>NoSQL</li>
-          <li>MongoDB</li>
-          <li>OOP</li>
-          <li>Git</li>
-          <li>Node.js</li>
-          <li>Express.js</li>
-          <li>ORM</li>
-          <li>React</li>
+          <li style={styles.skill}>HTML 5</li>
+          <li style={styles.skill}>JavaScript</li>
+          <li style={styles.skill}>CSS</li>
+          <li style={styles.skill}>MySQL</li>
+          <li style={styles.skill}>Communication</li>
+          <li style={styles.skill}>Swift</li>
+          <li style={styles.skill}>OOP</li>
+          <li style={styles.skill}>Git</li>
+          <li style={styles.skill}>Node.js</li>
+          <li style={styles.skill}>Flutter</li>
+          <li style={styles.skill}>Express.js</li>
+          <li style={styles.skill}>ORM</li>
+          <li style={styles.skill}>React</li>
+          <li style={styles.skill}>C#</li>
+          <li style={styles.skill}>.NET</li>
+          <li style={styles.skill}>Spline</li>
+          <li style={styles.skill}>WebFlow</li>
+          <li style={styles.skill}>Java</li>
+          <li style={styles.skill}>jQuery</li>
+          <li style={styles.skill}>Postgres</li>
+          <li style={styles.skill}>Xcode</li>
+          <li style={styles.skill}>Dart</li>
+          <li style={styles.skill}>React-Native</li>
         </ul>
       </section>
 
@@ -225,77 +222,38 @@ export default function ResumePage() {
         <h2 style={styles.experienceTitle}>Experience</h2>
         <div style={styles.workDiv}>
           <div style={styles.work1}>
-            <h3>ReadZen</h3>
+            <h3>Accountable Driving</h3>
             <div style={styles.dates}>
-              <p>Full Stack Web Developer</p>
-              <p>December 2023</p>
+              <p>Full Stack Mobile Engineer</p>
+              <p>August 2024-Present</p>
             </div>
             <ul>
               <li>
-                fullstack app for user friendly creating and sharing of
-                ReadMes/Projects
+              Flutter, Dart, Swift, Supabase, PostgreSQL, Figma, Trello, Xcode, Android Studio
               </li>
               <li>
-                React, Express.js, Node.js, Apollo Server, Graphql, javascript,
-                CSS, HTML, and MongoDB/Mongoose (MERN stack)
+              Bluetooth platform that tracks driving habits and provides reports and global rankings to promote safe driving through accountability. More info <a href="https://www.accountabledriving.com/">here</a>
               </li>
               <li>
-                Github:{" "}
-                <a href="https://github.com/Migsrkrd/ReadZen">click here</a> ,
-                Deployment:{" "}
-                <a href="https://read-zen.onrender.com/">click here</a>
+              Contributed to advancing development toward deployment readiness.
               </li>
             </ul>
           </div>
           <div style={styles.work1}>
-            <h3>Gym Flow</h3>
+            <h3>Gibber</h3>
             <div style={styles.dates}>
-              <p>Full Stack Web Developer</p>
-              <p>November 2023</p>
+              <p>Full Stack Software Engineer</p>
+              <p>July 2024-August 2024</p>
             </div>
             <ul>
               <li>
-                RESTful application for tracking, creating, and sharing workout
-                routines
+              React-Native, Socket.io, Mongoose, NoSql, React, RestFul API, Node.js, Ruby, Cookies, Redux Store
               </li>
               <li>
-                HTML, CSS, Javascript, Session, Node.js, Express, Cookies,
-                MySQL, Handlebars
+              An automated chat application with built-in translation. More info <a href="https://gibber.framer.ai/">here</a>
               </li>
               <li>
-                Github:{" "}
-                <a href="https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow">
-                  click here
-                </a>{" "}
-                , Deployment:{" "}
-                <a href="https://sheltered-inlet-69891-1c93b8a30eb8.herokuapp.com/">
-                  click here
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div style={styles.work1}>
-            <h3>Grocease</h3>
-            <div style={styles.dates}>
-              <p>Full Stack Web Developer</p>
-              <p>January 2024</p>
-            </div>
-            <ul>
-              <li>
-                Mern Application for creating, and sending grocery lists online{" "}
-              </li>
-              <li>
-              React, Express.js, Node.js, Apollo Server, Graphql, javascript, CSS, HTML, and MongoDB/Mongoose
-              </li>
-              <li>
-                Github:{" "}
-                <a href="https://github.com/Migsrkrd/Grocery-List">
-                  click here
-                </a>{" "}
-                , Deployment:{" "}
-                <a href="https://grocease-graphql.onrender.com">
-                  click here
-                </a>
+              Contributed to the initial development of both the frontend and backend of the application.
               </li>
             </ul>
           </div>
@@ -326,6 +284,25 @@ export default function ResumePage() {
           </div>
         </div>
       </section>
+      <div style={styles.edAndComp}>
+        <section style={styles.edSection}>
+          <h2 style={styles.edTitle}>Education</h2>
+          <section style={styles.edus}>
+            <div style={styles.edItem}>
+              <h3>Certificate of Completion in Full Stack Web Development</h3>
+              <p>University of California-Berkeley Bootcamp Spot - Remote</p>
+              <p>September 2023 to December 2023</p>
+              <li>Graduated in the top 1%</li>
+            </div>
+            <div style={styles.edItem}>
+              <h3>Bachelor's degree in Business Marketing</h3>
+              <p>San Jose State University - San Jose, CA</p>
+              <p>August 2016 to December 2020</p>
+              <li>Educational scholarship</li>
+            </div>
+          </section>
+        </section>
+      </div>
       <div style={styles.bottom}>
         <section style={styles.edSection}>
           <h2 style={styles.compTitle}>Miscellaneous</h2>
