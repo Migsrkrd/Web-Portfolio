@@ -295,7 +295,7 @@ export default function ResumePage() {
               <li>Graduated in the top 1%</li>
             </div>
             <div style={styles.edItem}>
-              <h3>Bachelor's degree in Business Marketing</h3>
+              <h3>Bachelor's degree in Computer Science</h3>
               <p>San Jose State University - San Jose, CA</p>
               <p>August 2016 to December 2020</p>
               <li>Educational scholarship</li>
