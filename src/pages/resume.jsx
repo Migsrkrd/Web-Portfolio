@@ -142,6 +142,83 @@ export default function ResumePage() {
     },
   };
 
+  const workData = [
+    {
+      companyName: "Breezy",
+      position: "Full Stack Software Engineer",
+      dates: "August 2024-Present",
+      bulletPoints: [
+        "Angular, Firebase, Google Cloud, Typescript, Git, Figma, Trello, Xcode, CM",
+        "A Social Platform for influencers and other members of the online community to share discounts and promotions.",
+        "Contributed to founding, initial code base, and further advancement of the platform.",
+      ],
+    },
+    {
+      companyName: "Accountable Driving",
+      position: "Full Stack Mobile Engineer",
+      dates: "August 2024-Present",
+      bulletPoints: [
+        "Flutter, Dart, Swift, Supabase, PostgreSQL, Figma, Trello, Xcode, Android Studio",
+        "Bluetooth platform that tracks driving habits and provides reports and global rankings to promote safe driving through accountability.",
+        "Contributed to advancing development toward deployment readiness.",
+      ],
+    },
+    {
+      companyName: "Gibber",
+      position: "Full Stack Software Engineer",
+      dates: "July 2024-August 2024",
+      bulletPoints: [
+        "React-Native, Socket.io, Mongoose, NoSQL, React, RESTful API, Node.js, Ruby, Cookies, Redux Store",
+        "An automated chat application with built-in translation.",
+        "Contributed to the initial development of both the frontend and backend of the application.",
+      ],
+    },
+    {
+      companyName: "The Old Spaghetti Factory",
+      position: "Marketing Assistant | Bartender | Server",
+      dates: "San Jose, CA August 2018 to March 2022",
+      bulletPoints: [
+        "Managed social media marketing programs/campaigns for a 22% increase in customer visits.",
+        "Collaborated with the marketing team to develop and implement strategies that enhanced brand visibility and customer engagement.",
+      ],
+    },
+    {
+      companyName: "Berliner Cohen LLP",
+      position: "Administrative Assistant",
+      dates: "March 2018 to August 2018",
+      bulletPoints: [
+        "Pivotal role in transitioning from paper to digital.",
+        "Assisted in the transition from paper to digital, enhancing operational efficiency.",
+      ],
+    },
+  ];
+
+  const skills = [
+    "HTML 5",
+    "JavaScript",
+    "CSS",
+    "MySQL",
+    "Communication",
+    "Swift",
+    "OOP",
+    "Git",
+    "Node.js",
+    "Flutter",
+    "Express.js",
+    "ORM",
+    "React",
+    "C#",
+    ".NET",
+    "Spline",
+    "WebFlow",
+    "Java",
+    "jQuery",
+    "Postgres",
+    "Xcode",
+    "Dart",
+    "React-Native",
+  ];
+
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
@@ -188,100 +265,35 @@ export default function ResumePage() {
           applications, aiming to enhance digital user experiences.
         </p>
       </section>
-
+      {/* MARK: Skills */}
       <section style={styles.skillsSection}>
         <h2 style={styles.skills}>Core Strengths and Skills</h2>
         <ul style={styles.skillsList}>
-          <li style={styles.skill}>HTML 5</li>
-          <li style={styles.skill}>JavaScript</li>
-          <li style={styles.skill}>CSS</li>
-          <li style={styles.skill}>MySQL</li>
-          <li style={styles.skill}>Communication</li>
-          <li style={styles.skill}>Swift</li>
-          <li style={styles.skill}>OOP</li>
-          <li style={styles.skill}>Git</li>
-          <li style={styles.skill}>Node.js</li>
-          <li style={styles.skill}>Flutter</li>
-          <li style={styles.skill}>Express.js</li>
-          <li style={styles.skill}>ORM</li>
-          <li style={styles.skill}>React</li>
-          <li style={styles.skill}>C#</li>
-          <li style={styles.skill}>.NET</li>
-          <li style={styles.skill}>Spline</li>
-          <li style={styles.skill}>WebFlow</li>
-          <li style={styles.skill}>Java</li>
-          <li style={styles.skill}>jQuery</li>
-          <li style={styles.skill}>Postgres</li>
-          <li style={styles.skill}>Xcode</li>
-          <li style={styles.skill}>Dart</li>
-          <li style={styles.skill}>React-Native</li>
+          {skills.map((skill, index) => (
+            <li key={index} style={styles.skill}>
+              {skill}
+            </li>
+          ))}
         </ul>
       </section>
-
+      {/* MARK: Work Experience */}
       <section style={styles.experienceSection}>
         <h2 style={styles.experienceTitle}>Experience</h2>
         <div style={styles.workDiv}>
-          <div style={styles.work1}>
-            <h3>Accountable Driving</h3>
-            <div style={styles.dates}>
-              <p>Full Stack Mobile Engineer</p>
-              <p>August 2024-Present</p>
+          {workData.map((work, index) => (
+            <div key={index} style={styles.work2}>
+              <h3>{work.companyName}</h3>
+              <div style={styles.dates}>
+                <p>{work.position}</p>
+                <p>{work.dates}</p>
+              </div>
+              <ul>
+                {work.bulletPoints.map((point, idx) => (
+                  <li key={idx}>{point}</li>
+                ))}
+              </ul>
             </div>
-            <ul>
-              <li>
-              Flutter, Dart, Swift, Supabase, PostgreSQL, Figma, Trello, Xcode, Android Studio
-              </li>
-              <li>
-              Bluetooth platform that tracks driving habits and provides reports and global rankings to promote safe driving through accountability. More info <a href="https://www.accountabledriving.com/">here</a>
-              </li>
-              <li>
-              Contributed to advancing development toward deployment readiness.
-              </li>
-            </ul>
-          </div>
-          <div style={styles.work1}>
-            <h3>Gibber</h3>
-            <div style={styles.dates}>
-              <p>Full Stack Software Engineer</p>
-              <p>July 2024-August 2024</p>
-            </div>
-            <ul>
-              <li>
-              React-Native, Socket.io, Mongoose, NoSql, React, RestFul API, Node.js, Ruby, Cookies, Redux Store
-              </li>
-              <li>
-              An automated chat application with built-in translation. More info <a href="https://gibber.framer.ai/">here</a>
-              </li>
-              <li>
-              Contributed to the initial development of both the frontend and backend of the application.
-              </li>
-            </ul>
-          </div>
-          <div style={styles.work1}>
-            <h3>The Old Spaghetti Factory</h3>
-            <p>National Restaurant Chain</p>
-            <div style={styles.dates}>
-              <p>Marketing Assistant | Bartender | Server</p>
-              <p>San Jose, CA August 2018 to March 2022</p>
-            </div>
-            <ul>
-              <li>
-                Managed social media marketing programs/campaigns for a 22%
-                increase in customer visits.
-              </li>
-            </ul>
-          </div>
-          <div style={styles.work1}>
-            <h3>Berliner Cohen LLP</h3>
-            <p>Law Firm Specializing in Business Law</p>
-            <div style={styles.dates}>
-              <p>Administrative Assistant</p>
-              <p>San Jose, CA March 2018 to August 2018</p>
-            </div>
-            <ul>
-              <li>Pivotal role in transitioning from paper to digital.</li>
-            </ul>
-          </div>
+          ))}
         </div>
       </section>
       <div style={styles.edAndComp}>

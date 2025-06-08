@@ -51,17 +51,17 @@ export default function Portfolio() {
     <div className="container">
       <h1 className="pagetitle">PORTFOLIO</h1>
       <div className="firstWork" onMouseEnter={showGif} onMouseLeave={hideGif}>
-        <a href="https://read-zen.onrender.com/" onClick={(e)=> handleMainOpenWindow(e, "https://read-zen.onrender.com/")}>
+        <a href="https://migsrkrd.github.io/Letter-Craft/" onClick={(e)=> handleMainOpenWindow(e, "https://migsrkrd.github.io/Letter-Craft/")}>
           <img src={imageSrc} alt="tech graphic" />
           <figcaption className="firstworktitle">
-            ReadZen
+            Letter Craft
             <a
-              href="https://github.com/Migsrkrd/ReadZen"
+              href="https://github.com/Migsrkrd/Letter-Craft"
               style={styles.githubLink}
               onClick={(e) =>
                 handleMainGithubWindow(
                   e,
-                  "https://github.com/Migsrkrd/ReadZen")}
+                  "https://github.com/Migsrkrd/Letter-Craft")}
             >
               <i
                 className="fa fa-github"
@@ -71,31 +71,29 @@ export default function Portfolio() {
             </a>
           </figcaption>
           <figcaption className="hidden-stuff">
-            A MERN web application used for creating ReadMes and sharing
-            projects!
+          A Front End Focused Web Application for creating and using personalized letter templates!
           </figcaption>
         </a>
       </div>
       <div className="work">
         <Projects
-          warn={false}
-          projectURL={"https://migsrkrd.github.io/Letter-Craft/"}
-          title={"Letter Craft"}
-          description={
-            "A Front End Focuses Web Application for creating and using personalized letter templates!"
-          }
-          githubURL={"https://github.com/Migsrkrd/Letter-Craft"}
-        />
-        <Projects warn={false} projectURL={"https://www.accountabledriving.com/"} title={"Accountable Driving"} description={"A bluetooth platform that tracks driving habits and provides reports and global rankings to promote safe driving through accountability"} githubURL={""}></Projects>
-        <Projects
-          warn={false}
-          projectURL={"https://www.gibber.chat/"}
-          title={"Gibber"}
-          description={
-            "An automated chat application with built-in translation!"
-          }
-          githubURL={""}
+        warn={false}
+        projectURL={"https://github.com/Migsrkrd/ReadZen"}
+        title={"ReadZen"}
+        description={
+          "A full stack web application for user friendly creation of READMEs!"
+        }
+        githubURL={"https://github.com/Migsrkrd/ReadZen"}
         ></Projects>
+        <Projects
+        warn={false}
+        projectURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}
+        title={"Gym Flow"}
+        description={
+          "A full stack web application for tracking your workouts and progress!"
+        }
+        githubURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}
+        />
         <Projects
           warn={true}
           projectURL={"https://grocease-graphql.onrender.com"}
@@ -106,18 +104,27 @@ export default function Portfolio() {
           githubURL={"https://github.com/Migsrkrd/Grocery-List"}
         />
         <Projects
-          projectURL={"https://migsrkrd.github.io/Weather-Dashboard/"}
-          title={"Weather Dashboard"}
-          description={"A weather dashboard to help you prepare for your day!"}
-          githubURL={"https://github.com/Migsrkrd/Weather-Dashboard"}
-        />
-        <Projects
           projectURL={"https://github.com/Migsrkrd/ReadMeGenerator"}
           title={"ReadMe Generator"}
           description={
             "A Node Application to help you create a ReadMe for your projects!"
           }
           githubURL={"https://github.com/Migsrkrd/ReadMeGenerator"}
+        />
+        <Projects
+          warn={false}
+          projectURL={"https://www.gibber.chat/"}
+          title={"Gibber"}
+          description={
+            "An automated chat application with built-in translation!"
+          }
+          githubURL={""}
+        ></Projects>
+        <Projects
+          projectURL={"https://migsrkrd.github.io/Weather-Dashboard/"}
+          title={"Weather Dashboard"}
+          description={"A weather dashboard to help you prepare for your day!"}
+          githubURL={"https://github.com/Migsrkrd/Weather-Dashboard"}
         />
       </div>
     </div>
