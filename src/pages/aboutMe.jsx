@@ -3,6 +3,19 @@ export default function AboutMePage() {
     container: {
       margin: "50px",
     },
+    aboutMeTextContainer: {
+      width: "80%",
+      margin: "0 auto",
+      padding: "0 20px",
+      boxSizing: "border-box",
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+      borderLeft: "1px solid white",
+      borderRight: "1px solid white",
+      padding: "0px 100px",
+    },
     title: {
       fontSize: "30px",
       fontWeight: "bold",
@@ -24,45 +37,50 @@ export default function AboutMePage() {
         alt="Photo of Michael Reickerd"
         className="photo"
       />
-      <p style={styles.text}>
-        At 25 years old, I've embarked on a path that resonates deeply with my
-        passion and purpose. Life has been a series of discoveries and choices,
-        and my pursuit of a fulfilling career has been no exception. As the youngest of four in a close-knit family of six, I've always been
-        certain about my love for sports, video games, and connecting with new
-        people. However, the road to finding the perfect career has been a
-        winding one.
-      </p>
+      <div style={styles.aboutMeTextContainer}>
+        <p style={styles.text}>
+          At 25 years old, I’ve found a career path that genuinely excites me.
+          Growing up as the youngest of four in a close-knit family, I always
+          knew I loved sports, creativity, and connecting with people. Over
+          time, I realized that software engineering brought all of those
+          interests together through problem solving, collaboration, and
+          building meaningful products.
+        </p>
 
-      <p style={styles.text}>
-        Born into a family of accountants, it seemed natural for me to follow
-        suit. With a knack for math, I enrolled in the Department of Accountancy
-        at the University of San Jose State. Two years into challenging courses
-        and countless late nights fueled by a newfound caffeine addiction, I
-        realized this wasn't the path for me. Undeterred, I explored different majors and eventually landed on
-        Business Marketing. While it aligned with my love for engaging with
-        others, it didn't take long to realize that there was still something
-        missing. Returning home to my childhood house, I decided to take a
-        break, introspect, and uncover undiscovered passions.
-      </p>
+        <p style={styles.text}>
+          I graduated from San Jose State University and UC Berkeley with a
+          degree in Computer Science, graduating in the top 1% of the program.
+          Through both my education and hands-on experience, I discovered that I
+          enjoy combining technical problem solving with thoughtful,
+          user-focused design.
+        </p>
 
-      <p style={styles.text}>
-        In a serendipitous turn of events, I decided to build my first PC. What
-        started as a fun project turned into a revelation during the coding
-        process to make a Microsoft Windows application bootable from a flash
-        drive. Computer coding had captured my interest in a way I hadn't
-        anticipated. This small venture into the vast world of web development became the
-        turning point in my career journey. Eager to delve deeper, I completed
-        the University of Berkeley Bootcamp, earning a certificate of
-        completion. Now, I am enthusiastically seeking a full-time position
-        where I can contribute my skills and passion for coding to make
-        meaningful contributions in the field of software engineering.
-      </p>
+        <p style={styles.text}>
+          Since then, I’ve worked across mobile and web development in several
+          fast-paced startup environments. Most recently, I’ve been developing
+          Flutter applications at Threebie, building responsive UI components,
+          implementing Bloc and Cubit for state management, and collaborating
+          with backend teams to integrate REST APIs. Before that, I worked at
+          Breezy helping build an influencer-focused social platform using
+          Angular, Firebase, and Google Cloud, and at Accountable Driving
+          creating a Bluetooth-based mobile app with Flutter, Swift, and
+          Supabase to encourage safer driving habits.
+        </p>
 
-      <p style={styles.text}>
-        Join me on this exciting adventure as I continue to grow, learn, and
-        make a mark in the ever-evolving world of technology. Let's build
-        something amazing together!
-      </p>
+        <p style={styles.text}>
+          Throughout my career, I’ve enjoyed working across the full stack,
+          blending my technical background with the communication and product
+          thinking I gained through marketing. Whether I’m designing a user
+          experience, building a frontend interface, or solving backend
+          challenges, I’m driven by creating products that feel polished,
+          useful, and meaningful.
+        </p>
+
+        <p style={styles.text}>
+          I’m excited to continue growing as an engineer, take on new
+          challenges, and keep building technology that makes a real impact.
+        </p>
+      </div>
     </div>
   );
 }

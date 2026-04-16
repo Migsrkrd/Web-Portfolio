@@ -144,9 +144,20 @@ export default function ResumePage() {
 
   const workData = [
     {
+      companyName: "Threebie LLC",
+      position: "Full Stack Mobile Developer",
+      dates: "September 2025-April 2026",
+      bulletPoints: [
+        "Developing and maintaining Flutter UI/UX components with responsive, high-performance design.",
+        "Implementing Bloc and Cubit for scalable state management and predictable UI behavior.",
+        "Working within a structured package architecture, organized into data, domain, dependency injection (DI), and presentation layers for clean separation of concerns.",
+        "Collaborating with the backend team to integrate REST APIs and optimize data handling."
+      ],
+    },
+    {
       companyName: "Breezy",
       position: "Full Stack Software Engineer",
-      dates: "August 2024-Present",
+      dates: "February 2025-August 2025",
       bulletPoints: [
         "Angular, Firebase, Google Cloud, Typescript, Git, Figma, Trello, Xcode, CM",
         "A Social Platform for influencers and other members of the online community to share discounts and promotions.",
@@ -156,7 +167,7 @@ export default function ResumePage() {
     {
       companyName: "Accountable Driving",
       position: "Full Stack Mobile Engineer",
-      dates: "August 2024-Present",
+      dates: "August 2024-February 2025",
       bulletPoints: [
         "Flutter, Dart, Swift, Supabase, PostgreSQL, Figma, Trello, Xcode, Android Studio",
         "Bluetooth platform that tracks driving habits and provides reports and global rankings to promote safe driving through accountability.",
@@ -172,25 +183,7 @@ export default function ResumePage() {
         "An automated chat application with built-in translation.",
         "Contributed to the initial development of both the frontend and backend of the application.",
       ],
-    },
-    {
-      companyName: "The Old Spaghetti Factory",
-      position: "Marketing Assistant | Bartender | Server",
-      dates: "San Jose, CA August 2018 to March 2022",
-      bulletPoints: [
-        "Managed social media marketing programs/campaigns for a 22% increase in customer visits.",
-        "Collaborated with the marketing team to develop and implement strategies that enhanced brand visibility and customer engagement.",
-      ],
-    },
-    {
-      companyName: "Berliner Cohen LLP",
-      position: "Administrative Assistant",
-      dates: "March 2018 to August 2018",
-      bulletPoints: [
-        "Pivotal role in transitioning from paper to digital.",
-        "Assisted in the transition from paper to digital, enhancing operational efficiency.",
-      ],
-    },
+    }
   ];
 
   const skills = [
@@ -222,8 +215,8 @@ export default function ResumePage() {
   const handleDownload = (e) => {
     e.preventDefault();
     const link = document.createElement("a");
-    link.href = "/resume.pdf";
-    link.download = "/resume.pdf";
+    link.href = "/Michael-Reickerd-Resume.pdf";
+    link.download = "/Michael-Reickerd-Resume.pdf";
     link.click();
   };
 
@@ -240,12 +233,12 @@ export default function ResumePage() {
       <section style={styles.addressSection}>
         <address style={styles.address}>
           (Cell) 408-903-3570 |{" "}
-          <a href="mailto:mreickcastillero@gmail.com" style={styles.links}>
-            mreickcastillero@gmail.com
+          <a href="mailto:michael.reickerd@gmail.com" style={styles.links}>
+            michael.reickerd@gmail.com
           </a>{" "}
           |{" "}
           <a
-            href="https://www.linkedin.com/in/mikey-reickerd-1716a71a3/"
+            href="https://www.linkedin.com/in/michael-reickerd-1716a71a3/"
             style={styles.links}
           >
             LinkedIn
