@@ -51,17 +51,24 @@ export default function Portfolio() {
     <div className="container">
       <h1 className="pagetitle">PORTFOLIO</h1>
       <div className="firstWork" onMouseEnter={showGif} onMouseLeave={hideGif}>
-        <a href="https://migsrkrd.github.io/Letter-Craft/" onClick={(e)=> handleMainOpenWindow(e, "https://migsrkrd.github.io/Letter-Craft/")}>
+        <a
+          href="https://migsrkrd.github.io/CareerCaddie/"
+          onClick={(e) =>
+            handleMainOpenWindow(e, "https://migsrkrd.github.io/CareerCaddie/")
+          }
+        >
           <img src={imageSrc} alt="tech graphic" />
           <figcaption className="firstworktitle">
-            Letter Craft
+            Career Caddie
             <a
-              href="https://github.com/Migsrkrd/Letter-Craft"
+              href="https://github.com/Migsrkrd/CareerCaddie"
               style={styles.githubLink}
               onClick={(e) =>
                 handleMainGithubWindow(
                   e,
-                  "https://github.com/Migsrkrd/Letter-Craft")}
+                  "https://github.com/Migsrkrd/CareerCaddie",
+                )
+              }
             >
               <i
                 className="fa fa-github"
@@ -71,28 +78,39 @@ export default function Portfolio() {
             </a>
           </figcaption>
           <figcaption className="hidden-stuff">
-          A Front End Focused Web Application for creating and using personalized letter templates!
+            Job hunting usually means dozens of tabs, repeat typing, and
+            scattered notes. Career Caddie helps reduce that friction by giving
+            you one focused workspace for recurring application tasks.
           </figcaption>
         </a>
       </div>
       <div className="work">
         <Projects
-        warn={false}
-        projectURL={"https://github.com/Migsrkrd/ReadZen"}
-        title={"ReadZen"}
-        description={
-          "A full stack web application for user friendly creation of READMEs!"
-        }
-        githubURL={"https://github.com/Migsrkrd/ReadZen"}
+          warn={false}
+          projectURL={"https://migsrkrd.github.io/Letter-Craft/"}
+          title={"Letter Craft"}
+          description={
+            "A Front End Focused Web Application for creating and using personalized letter templates!"
+          }
+          githubURL={"https://github.com/Migsrkrd/Letter-Craft"}
         ></Projects>
         <Projects
-        warn={false}
-        projectURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}
-        title={"Gym Flow"}
-        description={
-          "A full stack web application for tracking your workouts and progress!"
-        }
-        githubURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}
+          warn={false}
+          projectURL={"https://github.com/Migsrkrd/ReadZen"}
+          title={"ReadZen"}
+          description={
+            "A full stack web application for user friendly creation of READMEs!"
+          }
+          githubURL={"https://github.com/Migsrkrd/ReadZen"}
+        ></Projects>
+        <Projects
+          warn={false}
+          projectURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}
+          title={"Gym Flow"}
+          description={
+            "A full stack web application for tracking your workouts and progress!"
+          }
+          githubURL={"https://github.com/d-a-v-i-d-w-r-i-g-h-t/gym-flow"}
         />
         <Projects
           warn={true}
@@ -120,12 +138,6 @@ export default function Portfolio() {
           }
           githubURL={""}
         ></Projects>
-        <Projects
-          projectURL={"https://migsrkrd.github.io/Weather-Dashboard/"}
-          title={"Weather Dashboard"}
-          description={"A weather dashboard to help you prepare for your day!"}
-          githubURL={"https://github.com/Migsrkrd/Weather-Dashboard"}
-        />
       </div>
     </div>
   );
